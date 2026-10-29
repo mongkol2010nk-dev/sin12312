@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#a6e200">
+<title>SinTaxiThailand - บริการรถเหมาทั่วไทย รถเช่าพร้อมคนขับ รับส่งสนามบิน 24 ชม.</title>
+<meta name="description" content="SinTaxiThailand บริการรถเหมาทั่วไทย รถเช่าพร้อมคนขับ รถตู้ VIP รับส่งสนามบิน แท็กซี่ด่วน 24 ชั่วโมง โทร 092-457-4798">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TaxiService","name":"SinTaxiThailand","telephone":"+66924574798","areaServed":{"@type":"Country","name":"Thailand"},"openingHours":"Mo-Su 00:00-23:59"}</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'IBM Plex Sans Thai','Noto Sans Thai',sans-serif;font-weight:400;font-size:17px;line-height:1.75;color:#111;background:#fff;overflow-x:hidden;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+section{scroll-margin-top:84px}
+.c{text-align:center}
+/* header */
+header{position:sticky;top:0;z-index:50;background:linear-gradient(115deg,#a6e200 0%,#68d072 28%,#f7f07a 62%,#e6f7f6 100%);border-bottom:3px solid #4fc03a}
+.hd{display:flex;align-items:center;gap:14px;padding:12px 18px}
+.hd img{width:56px;height:56px;object-fit:cover;border-radius:50%;background:#b6f542;border:2px solid #fff}
+.hd b{font-weight:600;font-size:1.55rem;color:#1d2b3a;flex:1}
+#mb{font-size:1.7rem;width:44px;height:44px;background:none;border:0;cursor:pointer;color:#111}
+#menu{display:none;background:#f4ffd6;padding:6px 20px 14px}#menu.on{display:block}
+#menu a{display:block;padding:11px 0;border-bottom:1px solid #cfe98a;font-weight:400}
+.banner img{width:100%}
+/* hero */
+.h1{margin:22px 14px 0;background:#0e9fae;color:#fff200;border-radius:30px;text-align:center;font-size:clamp(1.9rem,8.6vw,3.05rem);line-height:1.2;padding:18px 10px;font-weight:600;text-wrap:balance}
+.sub{color:#3a2ad6;text-align:center;font-weight:500;font-size:1.12rem;line-height:1.55;padding:22px 18px 14px}
+/* slider */
+.slider{margin:6px 18px 0;border-radius:30px;overflow:hidden}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.sl{flex:0 0 100%;scroll-snap-align:center;aspect-ratio:16/10;background:#dfe6e9}
+.sl img{width:100%;height:100%;object-fit:cover}
+.rv .sl{aspect-ratio:4/3;background:#f4f4f4}
+.rv .sl img{object-fit:cover}
+.dots{display:flex;justify-content:center;gap:12px;padding:14px 0 0}
+.dots i{width:14px;height:14px;border-radius:50%;background:#cfcfcf;transition:.2s}.dots i.on{background:#000;transform:scale(1.15)}
+.txt{padding:34px 22px;text-align:center;font-size:1.05rem;line-height:1.85;font-weight:400}
+.txt b{font-weight:700}
+
+/* cta buttons */
+.cta2{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:16px 8px 4px}
+.cta2 a{display:flex;align-items:center;justify-content:center;gap:6px;border:3px solid #000;border-radius:999px;padding:12px 1px;font-weight:600;font-size:1rem;color:#fff;line-height:1.1;box-shadow:0 6px 12px rgba(0,0,0,.2);white-space:nowrap}
+.cta2 .cp{background:#d80000}
+.cta2 .cw{background:#25d366}
+
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mini a{display:flex;align-items:center;gap:6px;border:3px solid #000;border-radius:999px;padding:6px 8px;font-weight:600;font-size:.82rem;line-height:1.15;min-width:0;color:#fff}
+.mini .ic{flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem}
+.mini small{display:block;font-weight:500;font-size:.74rem}
+.mini .y{background:#ffd966;color:#000}.mini .y .ic{background:#b90000}
+.mini .wa{background:#25d366;color:#fff}.mini .wa .ic{background:#128c7e}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px;max-width:560px;margin:0 auto 6px}
+.duo a{display:flex;align-items:center;justify-content:center;gap:8px;border:3px solid #000;border-radius:999px;padding:12px 6px;color:#fff;font-weight:600;font-size:1rem;line-height:1.2;text-align:center;box-shadow:0 6px 12px rgba(0,0,0,.2)}
+.duo a i{font-size:1.2rem}
+.duo .tr{background:#d80000}.duo .tv{background:#25d366}
+
+/* G */
+.g{background:#7dfff0;padding:56px 0}
+.gb{margin:0 26px;border-radius:40px;padding:48px 26px 26px;background:linear-gradient(#5b6ff0,#7ea8dc 55%,#84b5c0);box-shadow:0 14px 30px rgba(0,60,80,.35)}
+.gl{background:#dcfdc4;border-radius:24px;padding:30px 24px 30px 22px;margin-bottom:22px;font-size:1.15rem;line-height:1.8;font-weight:400}
+.gl li{margin-left:24px;margin-bottom:14px}.gl a{color:#0a50e0;text-decoration:underline}
+
+/* airport */
+.ap{background:#e0ffa8;border-radius:26px;margin:40px 44px 0;padding:22px 14px;box-shadow:0 14px 26px rgba(0,0,0,.25);text-align:center}
+.ap h2{font-size:clamp(1.5rem,6.2vw,2.3rem);color:#08005f;line-height:1.3;font-weight:600}
+.ap .txt{padding:14px 4px 4px;font-size:.95rem;line-height:1.75}
+.frame{margin:26px 92px 0;background:#d9d9d9;border-radius:36px;padding:16px;box-shadow:0 14px 26px rgba(0,0,0,.3)}
+.frame img{border-radius:24px;width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* I */
+.sec{position:relative;margin-top:60px;border-top:14px solid #0a2a9c;border-bottom:14px solid #0a2a9c;background:#c9f3f3 center/cover;text-align:center;padding:44px 18px 40px}
+.sec::before{content:"";position:absolute;inset:0;background:rgba(215,248,250,.82)}
+.sec>*{position:relative}.sec h2{font-size:clamp(1.8rem,8vw,2.8rem);color:#0a2a9c;font-weight:600;line-height:1.3}
+.sec p{margin-top:34px;font-size:1.05rem;line-height:1.85;font-weight:400}
+
+/* cars */
+.ct{color:#8a6d00;font-size:clamp(1.75rem,8.3vw,2.8rem);text-align:center;margin:50px 0 28px;font-weight:600;line-height:1.2}
+.car{margin:0 22px 44px;border-radius:44px;padding:26px 22px;text-align:center;color:#fff}
+.car img{width:100%;aspect-ratio:4/3;object-fit:contain;margin-bottom:20px}
+.car h3{font-size:1.7rem;font-weight:600;line-height:1.2;margin-bottom:12px}.car p{font-size:1rem;line-height:1.75;font-weight:400}
+.car a{display:block;margin:20px 0 0;border:3px solid #f00;border-radius:999px;padding:9px;font-size:1.5rem;font-weight:600}
+.c1{background:#050e56}.c1 h3{color:#5de0d6}.c2{background:#0000e0}.c2 h3{color:#00ff80}.c3{background:#20256b}.c3 h3{color:#5de0d6}
+
+/* K */
+.k{background:#b87800;margin-top:60px;border-top:14px solid #ffee3a;padding-top:0}
+.k h2{color:#fff;font-weight:600;font-size:clamp(1.7rem,7.6vw,2.6rem);line-height:1.35;text-align:center;letter-spacing:.02em;padding:52px 16px 0}
+.line{width:min(520px,70%);height:8px;background:#000;margin:36px auto 44px}
+.kimg{padding:0 26px 60px}.kimg img{border-radius:40px;width:100%;aspect-ratio:3/2;object-fit:cover}
+.kb{position:relative;background:#4a2c12 center/cover;padding:60px 22px 64px;border-top:14px solid #ffee3a}
+.kb div{background:rgba(20,10,0,.88);color:#fff;border-radius:42px;padding:30px 22px;font-size:1.05rem;line-height:1.85;font-weight:400}
+.kc{padding:60px 18px 0}
+.full{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+/* L */
+.l{background:#3b87e8;margin-top:56px;padding-top:56px}
+.l h2{color:#fff;font-weight:600;font-size:clamp(1.8rem,8vw,2.8rem);line-height:1.4;text-align:center;padding:0 14px}
+.l .line{margin:36px auto 36px}
+.l .strip{background:#4d4d4d;color:#fff;padding:20px 24px;font-size:1.05rem;line-height:1.85;margin:50px 0 60px;font-weight:400}
+.l .full{aspect-ratio:16/9}
+.rf{margin:40px 22px 0;border:0;border-radius:34px;overflow:hidden;background:#000;box-shadow:0 12px 24px rgba(0,0,0,.28)}
+.rf img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.rt{color:#c00;text-align:center;font-size:1.6rem;margin:10px 0 40px;font-weight:600}
+.lw{background:#fff;padding-bottom:20px}
+
+/* M */
+.m h2{color:#0b5a1a;text-align:center;font-weight:600;font-size:clamp(1.7rem,7.6vw,2.6rem);line-height:1.5;letter-spacing:.03em;padding:56px 14px 0}
+.m .line{margin:36px auto 44px;width:min(520px,70%)}
+.mc{position:relative;margin:0 54px 18px;border:8px solid #000;border-radius:60px;overflow:hidden;background:#222 center/cover;text-align:center;color:#fff;padding:24px 14px 20px;min-height:0}
+.mc::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.78)}.mc>*{position:relative}
+.mi{width:92px;height:92px;margin:0 auto 14px;border:5px solid #0a9a0a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:#0a9a0a}
+.mc p{font-size:1.4rem;line-height:1.35;font-weight:600}
+.dr{margin:50px 54px 0;border-radius:34px;overflow:hidden;box-shadow:12px 14px 20px rgba(0,0,0,.3)}.dr img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mt{padding:60px 36px 40px;font-size:1.05rem;line-height:1.85;text-align:left;font-weight:400}
+
+/* N */
+.n{position:relative;margin:60px 26px 0;background:#f2b800 center/cover;padding:90px 0 50px;overflow:hidden}
+.n::before{content:"";position:absolute;inset:0;background:linear-gradient(#2a1608cc,#2a160855 30%,#0000)}.n>*{position:relative}
+.np{width:min(86%,460px);margin:0 auto;background:#050505;color:#19ff19;border:3px solid #fff;border-radius:30px;text-align:center;font-size:1.35rem;font-weight:600;padding:16px 12px;line-height:1.3}
+.nb{margin:40px 26px 0;background:rgba(255,255,255,.9);border-radius:22px;padding:24px 28px;font-size:1.05rem;line-height:1.85;font-weight:400}
+.nb ul{margin:22px 0 4px 22px;font-size:1.15rem;line-height:1.9}
+.rb{display:flex;justify-content:center;gap:24px;margin-top:44px}
+.rb a{width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.4rem;box-shadow:0 8px 16px rgba(0,0,0,.3)}
+.rb a:nth-child(1){background:#c00000}.rb a:nth-child(2){background:#25d366}
+
+.o{margin:60px 26px 0;background:#eceaea;text-align:center}
+.o h2{font-size:clamp(1.55rem,6.6vw,2.3rem);font-weight:600;line-height:1.45;padding:36px 8px 10px}
+.o p{padding:30px 22px;font-size:1.05rem;line-height:1.85;text-align:left;font-weight:400}
+.o img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* reviews */
+.rv{padding:80px 0 20px;background:#fff}.rv h2{text-align:center;font-weight:600;color:#0a2a9c;font-size:clamp(1.5rem,6.2vw,2.3rem);margin-bottom:24px}
+footer{background:#111;color:#ccc;text-align:center;padding:36px 16px 120px;font-size:.95rem;margin-top:70px}
+footer b{color:#fff;font-weight:500}
+
+/* floating */
+.fab{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:40;display:flex;flex-direction:column;gap:12px}
+.fab a{width:56px;height:56px;border-radius:50%;color:#fff;font-size:1.7rem;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px -6px rgba(0,0,0,.45)}
+.fab a:nth-child(1){background:#e60000;font-size:1.4rem}.fab a:nth-child(2){background:#25d366}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:4px 14px 8px}
+.stats div{background:#e0ffa8;border:3px solid #000;border-radius:22px;padding:10px 4px 8px;text-align:center;line-height:1.25;box-shadow:0 6px 12px rgba(0,0,0,.15)}
+.stats b{display:block;font-size:1.45rem;font-weight:700;color:#0a2a9c;font-variant-numeric:tabular-nums;line-height:1.3}
+.stats span{font-size:.78rem;color:#222;font-weight:500}
+
+.btn2{border:3px solid #000;border-radius:999px;padding:12px 24px;font-size:1.15rem;font-weight:600;color:#fff;background:#0e9fae;cursor:pointer;font-family:inherit}
+#lb{display:none;position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:14px}#lb.on{display:flex}#lb img{max-height:88vh;border-radius:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <img src="https://mongkol20010.wordpress.com/wp-content/uploads/2025/10/5381.jpg" alt="โลโก้ SinTaxiThailand">
+    <b>SinTaxiThailand</b>
+    <button id="mb" aria-label="เมนู"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <nav id="menu">
+    <a href="#taxi">แท็กซี่ด่วน / จองล่วงหน้า</a>
+    <a href="#airport">รับส่งสนามบิน</a>
+    <a href="#cars">รถที่ให้บริการ</a>
+    <a href="#rent">เช่ารถพร้อมคนขับ</a>
+    <a href="#van">เหมารถตู้</a>
+    <a href="#province">เหมารถต่างจังหวัด</a>
+    <a href="#reviews">รีวิวลูกค้า</a>
+    <a href="#contact">ติดต่อเรา</a>
+  </nav>
+</header>
+
+<main>
+<div class="banner">
+  <img src="https://mongkol20010.wordpress.com/wp-content/uploads/2025/10/5380.jpg" alt="แบนเนอร์หลัก SinTaxiThailand" style="width:100%; border-radius:8px;">
+</div>
+
+<div class="cta2">
+  <a class="cp" href="tel:0924574798"><i class="fa-solid fa-phone"></i> โทร 092-457-4798</a>
+  <a class="cw" href="https://wa.me/66924574798" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<h1 class="h1">บริการเหมารถ ทั่วไทย</h1>
+<p class="sub">บริการรถเหมาทั่วไทย เช่ารถพร้อมคนขับ สะดวกสบาย ส่งถึงจุดหมายปลอดภัย 24 ชั่วโมง</p>
+
+<div class="stats">
+  <div><b class="cn" data-t="15000" data-s="+">0</b><span>เที่ยววิ่งสำเร็จ</span></div>
+  <div><b class="cn" data-t="77">0</b><span>จังหวัดทั่วไทย</span></div>
+  <div><b class="cn" data-t="24">0</b><span>ชั่วโมง พร้อมบริการ</span></div>
+</div>
+
+<div class="slider" id="s1">
+  <div class="track">
+    <div class="sl"><img src="https://mongkol20010.wordpress.com/wp-content/uploads/2025/10/5374.jpg" alt="SinTaxiThailand 1"></div>
+    <div class="sl"><img src="https://mongkol20010.wordpress.com/wp-content/uploads/2025/10/5382.jpg" alt="SinTaxiThailand 2"></div>
+    <div class="sl"><img src="https://mongkol20010.wordpress.com/wp-content/uploads/2025/10/5375.jpg" alt="SinTaxiThailand 3"></div>
+  </div>
+</div>
+<div class="dots"></div>
+
+<p class="txt">ต้องการรถเหมาพร้อมคนขับสำหรับเดินทางต่างจังหวัด รับส่งสนามบิน ติดต่อธุรกิจ หรือพาครอบครัวไปเที่ยวหรือไม่? <b>SinTaxiThailand ให้บริการรถเหมาทั่วไทย พร้อมคนขับมืออาชีพ</b> สอบถามเส้นทางและเลือกรถที่เหมาะกับการเดินทางได้ ไม่ว่าจะเดินทางคนเดียว ครอบครัว หรือหมู่คณะ</p>
+
+<section class="g" id="contact">
+  <div class="gb">
+    <ul class="gl">
+      <li><a href="#taxi">บริการเรียก-เหมาแท็กซี่ ด่วน / จองล่วงหน้า</a></li>
+      <li><a href="#airport">บริการรับส่งสนามบิน</a></li>
+      <li><a href="#rent">บริการเช่ารถพร้อมคนขับ</a></li>
+      <li><a href="#van">บริการเหมารถตู้ พร้อมคนขับ</a></li>
+      <li><a href="#province">บริการเหมารถไปต่างจังหวัด</a></li>
+    </ul>
+    <div class="mini">
+      <a class="y" href="tel:0924574798"><span class="ic"><i class="fa-solid fa-phone"></i></span><span>092-457-4798<small>โทรเลย</small></span></a>
+      <a class="wa" href="https://wa.me/66924574798" target="_blank" rel="noopener"><span class="ic"><i class="fa-brands fa-whatsapp"></i></span><span>WhatsApp<small>แชทเลย</small></span></a>
+    </div>
+  </div>
+</section>
+
+<section id="airport">
+  <div class="ap">
+    <h2>บริการรับส่ง สนามบิน</h2>
+    <p class="txt">บริการแท็กซี่และรถเหมารับ-ส่งสนามบิน ทั้งสุวรรณภูมิ ดอนเมือง อู่ตะเภา และสนามบินต่างจังหวัด จองล่วงหน้าได้ ตรงเวลา ช่วยยกสัมภาระ ให้บริการตลอด 24 ชั่วโมง</p>
+  </div>
+  <div class="duo" style="margin-top:30px">
+    <a class="tr" href="tel:0924574798"><i class="fa-solid fa-phone"></i> โทรจองรถ</a>
+    <a class="tv" href="https://wa.me/66924574798" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  </div>
+  <div class="frame"><img data-img="airport" data-ph="รูปรับส่งสนามบิน" alt="บริการรับส่งสนามบิน" loading="lazy"></div>
+</section>
+
+<section class="sec" data-bg="bgwoman">
+  <h2>บริการรถเหมา ทั่วไทย</h2>
+  <p>รถเหมาทั่วไทย เดินทางได้ทุกจังหวัด ทั้งท่องเที่ยว ติดต่อธุรกิจ กลับภูมิลำเนา หรือเดินทางส่วนตัว มีรถหลายขนาดให้เลือก พร้อมคนขับชำนาญเส้นทาง ราคาเหมาะสม เดินทางปลอดภัย</p>
+</section>
+
+<section id="cars">
+  <h2 class="ct">รถที่ให้บริการ</h2>
+  <div class="car c1">
+    <img data-img="sedan" data-ph="รูปรถ Sedan" alt="รถเล็ก Sedan" loading="lazy">
+    <h3>รถเล็ก (Sedan)</h3>
+    <p>เหมาะสำหรับเดินทางทั่วไป รับส่งสนามบิน ประชุมธุรกิจ หรือเดินทางต่างจังหวัดแบบส่วนตัว นั่งสบาย ประหยัด คล่องตัว</p>
+    <a href="tel:0924574798">ติดต่อบริการ</a>
+  </div>
+  <div class="car c2">
+    <img data-img="suv" data-ph="รูปรถ SUV" alt="รถ SUV" loading="lazy">
+    <h3>รถ SUV</h3>
+    <p>เหมาะสำหรับผู้ที่ต้องการพื้นที่กว้างขึ้น นั่งสบาย เดินทางไกลได้ดี รองรับสัมภาระจำนวนมาก เหมาะกับครอบครัวและนักท่องเที่ยว</p>
+    <a href="tel:0924574798">ติดต่อบริการ</a>
+  </div>
+  <div class="car c3">
+    <img data-img="vipvan" data-ph="รูปรถตู้ VIP" alt="รถตู้ VIP" loading="lazy">
+    <h3>รถตู้ VIP</h3>
+    <p>รองรับผู้โดยสารหลายคน เหมาะสำหรับทริปท่องเที่ยว รับส่งพนักงาน งานสัมมนา เดินทางเป็นหมู่คณะ รถสะอาด กว้างขวาง พร้อมคนขับมืออาชีพ</p>
+    <a href="tel:0924574798">ติดต่อบริการ</a>
+  </div>
+</section>
+
+<section class="k" id="rent">
+  <h2>บริการเช่ารถพร้อมคนขับ</h2>
+  <div class="line"></div>
+  <div class="kimg"><img data-img="passengers" data-ph="รูปผู้โดยสารในรถ" alt="เช่ารถพร้อมคนขับ" loading="lazy"></div>
+  <div class="kb" data-bg="carbg">
+    <div>บริการเช่ารถพร้อมคนขับ สำหรับลูกค้าที่ต้องการความสะดวกสบาย ไม่ต้องขับรถเอง เหมาะสำหรับเดินทางประชุม งานธุรกิจ ท่องเที่ยว หรือใช้งานรายวัน พร้อมคนขับสุภาพ ตรงเวลา และดูแลตลอดการเดินทาง</div>
+  </div>
+  <div class="kc">
+    <div class="duo">
+      <a class="tr" href="tel:0924574798"><i class="fa-solid fa-phone"></i> โทรจองรถ</a>
+      <a class="tv" href="https://wa.me/66924574798" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+  <img class="full" data-img="rentcar" data-ph="รูปรถเช่า" alt="รถเช่าพร้อมคนขับ" loading="lazy" style="margin-top:50px">
+  <div style="height:14px;background:#b87800"></div>
+</section>
+
+<section class="l" id="van">
+  <h2>บริการเหมารถตู้ พร้อมคนขับ</h2>
+  <div class="line"></div>
+  <img class="full" data-img="vans" data-ph="รูปรถตู้หลายคัน" alt="บริการเหมารถตู้" loading="lazy">
+  <p class="strip">บริการเช่ารถตู้และเหมารถตู้พร้อมคนขับ รองรับการเดินทางแบบหมู่คณะ ครอบครัว ทริปท่องเที่ยว สัมมนา หรือรับส่งพนักงาน รถกว้างขวาง นั่งสบาย พร้อมเดินทางทั่วไทย</p>
+  <div style="padding:0 0 50px">
+    <div class="duo">
+      <a class="tr" href="tel:0924574798"><i class="fa-solid fa-phone"></i> โทรจองรถ</a>
+      <a class="tv" href="https://wa.me/66924574798" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+  <div class="lw">
+    <div class="rf"><img data-img="van1" data-ph="รูปรถตู้นำเที่ยว" alt="เช่า-เหมารถตู้นำเที่ยว" loading="lazy"></div>
+    <p class="rt">เช่า-เหมารถตู้นำเที่ยว</p>
+    <div class="rf"><img data-img="van2" data-ph="รูปภายในรถตู้ VIP" alt="รถตู้ VIP" loading="lazy"></div>
+    <p class="rt">รถตู้ VIP</p>
+    <div class="rf"><img data-img="van3" data-ph="รูปรถ VAN LUXURY" alt="VAN LUXURY" loading="lazy"></div>
+    <p class="rt">VAN LUXURY</p>
+  </div>
+</section>
+
+<section class="m" id="province" style="background:#fff">
+  <h2>บริการเหมารถไป ต่างจังหวัด</h2>
+  <div class="line"></div>
+  <div class="mc" data-bg="m1"><div class="mi"><i class="fa-solid fa-car-side"></i></div><p>บริการเหมารถเล็ก<br>เหมาะสำหรับ 4 ท่าน</p></div>
+  <div class="mc" data-bg="m2"><div class="mi" style="border-color:#06a050;color:#06a050"><i class="fa-solid fa-car-side"></i></div><p>บริการเหมารถใหญ่<br>เหมาะสำหรับ 6 ท่าน</p></div>
+  <div class="mc" data-bg="m3"><div class="mi" style="border-color:#7ee800;color:#7ee800"><i class="fa-solid fa-car-side"></i></div><p>บริการเหมารถตู้<br>เหมาะสำหรับ 10 ท่าน</p></div>
+  <div class="dr"><img data-img="driver" data-ph="รูปคนขับกับผู้โดยสาร" alt="คนขับรถเหมาต่างจังหวัด" loading="lazy"></div>
+  <p class="mt">บริการเหมารถไปต่างจังหวัดแบบส่วนตัว เดินทางสะดวก ไม่ต้องต่อรถ เหมาะสำหรับท่องเที่ยว กลับภูมิลำเนา ติดต่อธุรกิจ หรือเดินทางพร้อมครอบครัว เลือกประเภทรถได้ตามความต้องการ</p>
+</section>
+
+<section class="n" id="taxi" data-bg="taxiBg">
+  <div class="np">บริการแท็กซี่ด่วน 24 ชั่วโมง</div>
+  <div class="nb">
+    <p>ลูกค้าสามารถโทรจองล่วงหน้าได้ เพื่อให้มั่นใจว่ามีรถพร้อมตรงเวลา โดยเฉพาะ:</p>
+    <ul>
+      <li>เดินทางไปสนามบิน</li>
+      <li>นัดประชุม</li>
+      <li>เดินทางต่างจังหวัด</li>
+      <li>รับญาติผู้ใหญ่</li>
+      <li>เดินทางช่วงเทศกาล</li>
+    </ul>
+  </div>
+  <div class="rb">
+    <a href="tel:0924574798" aria-label="โทร"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://wa.me/66924574798" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+  <div style="height:60px"></div>
+</section>
+
+<section class="o">
+  <h2>บริการเรียก-เหมาแท็กซี่ ด่วน / จองล่วงหน้า</h2>
+  <p>บริการโทรเรียกแท็กซี่ด่วน และจองรถล่วงหน้า 24 ชั่วโมง เดินทางสะดวก รวดเร็ว ให้บริการทั้งในเมืองและต่างจังหวัด เหมาะสำหรับเดินทางทั่วไป รับส่งงาน รับส่งครอบครัว หรือเดินทางเร่งด่วน ด้วยคนขับมืออาชีพและรถพร้อมใช้งานตลอดเวลา</p>
+  <img data-img="taxi" data-ph="รูปแท็กซี่" alt="แท็กซี่ด่วน" loading="lazy">
+</section>
+
+<!-- ส่วนรีวิวจากลูกค้าแบบสไลด์ -->
+<section class="rv" id="reviews">
+  <h2>รีวิวจากลูกค้า</h2>
+  <div class="slider" id="s2"><div class="track"></div></div>
+  <div class="dots"></div>
+</section>
+</main>
+
+<footer>
+  <b>SinTaxiThailand</b><br>
+  โทร 092-457-4798 · WhatsApp +66 92 457 4798<br>
+  เปิดบริการ 24 ชั่วโมง ทุกวัน<br>
+  &copy; <span id="yr"></span> SinTaxiThailand สงวนลิขสิทธิ์
+</footer>
+
+<div class="fab">
+  <a href="tel:0924574798" aria-label="โทร"><i class="fa-solid fa-phone"></i></a>
+  <a href="https://wa.me/66924574798" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<div id="lb"><img id="lbi" alt=""></div>
+
+<script>
+const B='https://mongkol20010.wordpress.com/wp-content/uploads/2025/10/';
+const IMG={
+ logo:B+'5381.jpg',
+ banner:B+'5380.jpg',
+ airport:B+'2929.jpg?w=1024',
+ bgwoman:'',
+ sedan:B+'2756.jpg?w=1024',
+ suv:B+'2920.jpg?w=1024',
+ vipvan:B+'1775-1.png?w=1024',
+ passengers:B+'1760-1.png?w=1024',
+ carbg:'',
+ rentcar:B+'1783-1.jpg?w=1024',
+ vans:'',
+ van1:'', van2:'', van3:'',
+ m1:'', m2:'', m3:'',
+ driver:B+'2779.jpg?w=1024',
+ taxiBg:'',
+ taxi:''
+};
+
+const SLIDES=[
+ B+'5374.jpg',
+ B+'5382.jpg',
+ B+'5375.jpg'
+];
+
+const REVIEWS=[
+ B+'5374.jpg',
+ B+'5382.jpg',
+ B+'5375.jpg',
+ B+'5380.jpg',
+ B+'5381.jpg'
+];
+
+const $=id=>document.getElementById(id);
+const PH=t=>'data:image/svg+xml;utf8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dfff0"/><stop offset="1" stop-color="#5b6ff0"/></linearGradient></defs><rect width="800" height="520" fill="url(#g)"/><text x="400" y="250" font-size="44" text-anchor="middle" fill="#fff" font-family="sans-serif">ใส่รูปที่นี่</text><text x="400" y="312" font-size="30" text-anchor="middle" fill="#fff" font-family="sans-serif">${t}</text></svg>`);
+
+document.querySelectorAll('[data-img]').forEach(e=>{
+  const k=e.dataset.img,p=e.dataset.ph||k;
+  e.src=IMG[k]||PH(p);
+  e.onerror=()=>{e.onerror=null;e.src=PH(p)};
+});
+
+document.querySelectorAll('[data-bg]').forEach(e=>{
+  const u=IMG[e.dataset.bg];
+  if(u)e.style.backgroundImage=`url("${u}")`;
+});
+
+function slider(id,list,label){
+ const el=$(id),tr=el.querySelector('.track'),dots=el.nextElementSibling;
+ const items=list.length?list:[1,2,3].map(()=>'');
+ tr.innerHTML=items.map((s,i)=>`<div class="sl"><img src="${s||PH(label)}" alt="${label} ${i+1}" loading="${i?'lazy':'eager'}"></div>`).join('');
+ tr.querySelectorAll('img').forEach(im=>{
+   im.onerror=()=>{im.onerror=null;im.src=PH(label)};
+   im.onclick=()=>{if(id==='s2'){ $('lbi').src=im.src; $('lb').classList.add('on'); }};
+ });
+ const n=tr.children.length;
+ dots.innerHTML=[...tr.children].map(()=>'<i></i>').join('');
+ const idx=()=>Math.round(tr.scrollLeft/tr.clientWidth);
+ const upd=()=>[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===idx()));
+ tr.addEventListener('scroll',upd,{passive:true});upd();
+ 
+ const autoSlide=()=>{
+  let next=(idx()+1)%n;
+  tr.scrollTo({left:next*tr.clientWidth,behavior:'smooth'});
+ };
+ let t=setInterval(autoSlide,2500);
+ tr.addEventListener('touchstart',()=>clearInterval(t),{passive:true,once:true});
+}
+
+slider('s1',SLIDES,'รูปรถ');
+slider('s2',REVIEWS,'รูปรีวิวลูกค้า');
+
+$('mb').onclick=()=>$('menu').classList.toggle('on');
+document.querySelectorAll('#menu a').forEach(a=>a.onclick=()=>$('menu').classList.remove('on'));
+$('yr').textContent=new Date().getFullYear()+543;
+
+(function(){
+ const fmt=n=>n.toLocaleString('th-TH'),rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const run=el=>{
+   const t=+el.dataset.t,s=el.dataset.s||'';
+   if(rm){el.textContent=fmt(t)+s;return}
+   const st=performance.now();
+   (function k(n){
+     const p=Math.min((n-st)/1800,1);
+     el.textContent=fmt(Math.floor((1-Math.pow(1-p,3))*t))+s;
+     if(p<1)requestAnimationFrame(k);
+     else el.textContent=fmt(t)+s;
+   })(st);
+ };
+ const io=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){run(e.target);o.unobserve(e.target)}}),{threshold:.5});
+ document.querySelectorAll('.cn').forEach(e=>io.observe(e));
+})();
+
+$('lb').onclick=()=>{$('lb').classList.remove('on');$('lbi').src=''};
+</script>
+</body>
+</html>
